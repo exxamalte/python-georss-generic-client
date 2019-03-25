@@ -26,8 +26,8 @@ feed entries specific to the selected feed.
 
 | Filter     |                     | Description |
 |------------|---------------------|-------------|
-| Radius     | `filter_radius`     | Radius in kilometers around the home coordinates in which events from feed are included. |
-| Categories | `filter_categories` | Array of category names. Only events with a category matching any of these is included. |
+| Radius     | `filter_radius`     | Radius in kilometers around the home coordinates in which events from the feed are included. |
+| Categories | `filter_categories` | Array of category names. Only events with a category matching any of these are included. |
 
 **Example**
 ```python
