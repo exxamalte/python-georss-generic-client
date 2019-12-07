@@ -1,5 +1,9 @@
 # Changes
 
+## 0.3 (05/12/2019)
+* Using version 0.10 of upstream [python-georss-client](https://github.com/exxamalte/python-georss-client) library.
+* Fix handling feeds starting with byte order mark.
+
 ## 0.2 (01/04/2019)
 * Using version 0.9 of upstream [python-georss-client](https://github.com/exxamalte/python-georss-client) library.
 * Dropped Python 3.5 support.
