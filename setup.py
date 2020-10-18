@@ -9,7 +9,7 @@ REQUIRES = [
 
 setup(
     name="georss_generic_client",
-    version="0.3",
+    version="0.4",
     author="Malte Franken",
     author_email="coding@subspace.de",
     description="A GeoRSS generic client library.",
