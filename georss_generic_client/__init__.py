@@ -3,7 +3,7 @@ Generic GeoRSS feed.
 
 Support for generic GeoRSS feeds from various sources.
 """
-from georss_client import GeoRssFeed, FeedEntry
+from georss_client import FeedEntry, GeoRssFeed
 from georss_client.consts import ATTR_ATTRIBUTION
 from georss_client.feed_manager import FeedManagerBase
 
