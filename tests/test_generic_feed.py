@@ -1,10 +1,11 @@
 """Test for the generic georss feed."""
 import datetime
-import requests
 import unittest
 from unittest import mock
 
+import requests
 from georss_client import UPDATE_ERROR, UPDATE_OK
+
 from georss_generic_client import GenericFeed, GenericFeedManager
 from tests import load_fixture
 
