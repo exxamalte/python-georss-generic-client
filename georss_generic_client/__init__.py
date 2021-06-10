@@ -11,32 +11,47 @@ from georss_client.feed_manager import FeedManagerBase
 class GenericFeedManager(FeedManagerBase):
     """Feed Manager for Generic GeoRSS feed."""
 
-    def __init__(self, generate_callback, update_callback, remove_callback,
-                 coordinates, url, filter_radius=None,
-                 filter_categories=None):
+    def __init__(
+        self,
+        generate_callback,
+        update_callback,
+        remove_callback,
+        coordinates,
+        url,
+        filter_radius=None,
+        filter_categories=None,
+    ):
         """Initialize the Generic GeoRSS Feed Manager."""
         feed = GenericFeed(
             coordinates,
             url,
             filter_radius=filter_radius,
-            filter_categories=filter_categories)
-        super().__init__(feed, generate_callback, update_callback,
-                         remove_callback)
+            filter_categories=filter_categories,
+        )
+        super().__init__(feed, generate_callback, update_callback, remove_callback)
 
 
 class GenericFeed(GeoRssFeed):
     """Generic GeoRSS feed."""
 
-    def __init__(self, home_coordinates, url, filter_radius=None,
-                 filter_categories=None):
+    def __init__(
+        self, home_coordinates, url, filter_radius=None, filter_categories=None
+    ):
         """Initialise this service."""
-        super().__init__(home_coordinates, url, filter_radius=filter_radius,
-                         filter_categories=filter_categories)
+        super().__init__(
+            home_coordinates,
+            url,
+            filter_radius=filter_radius,
+            filter_categories=filter_categories,
+        )
 
     def _new_entry(self, home_coordinates, rss_entry, global_data):
         """Generate a new entry."""
-        attribution = None if not global_data and ATTR_ATTRIBUTION not in \
-            global_data else global_data[ATTR_ATTRIBUTION]
+        attribution = (
+            None
+            if not global_data and ATTR_ATTRIBUTION not in global_data
+            else global_data[ATTR_ATTRIBUTION]
+        )
         return GenericFeedEntry(home_coordinates, rss_entry, attribution)
 
 
