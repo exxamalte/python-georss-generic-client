@@ -34,7 +34,7 @@ feed entries specific to the selected feed.
 from georss_generic_client import GenericFeed
 # Home Coordinates: Latitude: -27.5, Longitude: 153.0
 # Filter radius: 200 km
-feed = GenericFeed((-27.5, 153.0), filter_radius=200, 
+feed = GenericFeed((-27.5, 153.0), filter_radius=200,
                    url="https://www.qfes.qld.gov.au/data/alerts/bushfireAlert.xml")
 status, entries = feed.update()
 ```
