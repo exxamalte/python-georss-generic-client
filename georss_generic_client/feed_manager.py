@@ -1,4 +1,6 @@
 """Generic GeoRSS feed manager."""
+from __future__ import annotations
+
 from georss_client.feed_manager import FeedManagerBase
 
 from .feed import GenericFeed
@@ -13,7 +15,7 @@ class GenericFeedManager(FeedManagerBase):
         update_callback,
         remove_callback,
         coordinates: tuple[float, float],
-        url: str,
+        url: str | None,
         filter_radius: float = None,
         filter_categories=None,
     ):

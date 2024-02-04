@@ -1,4 +1,6 @@
 """Generic GeoRSS feed."""
+from __future__ import annotations
+
 from georss_client import ATTR_ATTRIBUTION, GeoRssFeed
 
 from .feed_entry import GenericFeedEntry
@@ -10,7 +12,7 @@ class GenericFeed(GeoRssFeed):
     def __init__(
         self,
         home_coordinates: tuple[float, float],
-        url: str,
+        url: str | None,
         filter_radius: float = None,
         filter_categories=None,
     ):
