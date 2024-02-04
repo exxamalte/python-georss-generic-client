@@ -1,6 +1,6 @@
 # python-georss-generic-client
 
-[![Build Status](https://github.com/exxamalte/python-georss-generic-client/workflows/CI/badge.svg?branch=master)](https://github.com/exxamalte/python-georss-generic-client/actions?workflow=CI)
+[![Build Status](https://github.com/exxamalte/python-georss-generic-client/actions/workflows/ci.yaml/badge.svg?branch=master)](https://github.com/exxamalte/python-georss-generic-client/actions?workflow=CI)
 [![codecov](https://codecov.io/gh/exxamalte/python-georss-generic-client/branch/master/graph/badge.svg?token=PLJ2JQUTXW)](https://codecov.io/gh/exxamalte/python-georss-generic-client)
 [![PyPi](https://img.shields.io/pypi/v/georss-generic-client.svg)](https://pypi.python.org/pypi/georss-generic-client)
 [![Version](https://img.shields.io/pypi/pyversions/georss-generic-client.svg)](https://pypi.python.org/pypi/georss-generic-client)
