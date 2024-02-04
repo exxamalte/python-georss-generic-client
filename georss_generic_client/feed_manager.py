@@ -12,9 +12,9 @@ class GenericFeedManager(FeedManagerBase):
         generate_callback,
         update_callback,
         remove_callback,
-        coordinates,
-        url,
-        filter_radius=None,
+        coordinates: tuple[float, float],
+        url: str,
+        filter_radius: float = None,
         filter_categories=None,
     ):
         """Initialize the Generic GeoRSS Feed Manager."""

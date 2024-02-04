@@ -8,7 +8,11 @@ class GenericFeed(GeoRssFeed):
     """Generic GeoRSS feed."""
 
     def __init__(
-        self, home_coordinates, url, filter_radius=None, filter_categories=None
+        self,
+        home_coordinates: tuple[float, float],
+        url: str,
+        filter_radius: float = None,
+        filter_categories=None,
     ):
         """Initialise this service."""
         super().__init__(
@@ -18,9 +22,11 @@ class GenericFeed(GeoRssFeed):
             filter_categories=filter_categories,
         )
 
-    def _new_entry(self, home_coordinates, rss_entry, global_data):
+    def _new_entry(
+        self, home_coordinates: tuple[float, float], rss_entry, global_data
+    ) -> GenericFeedEntry:
         """Generate a new entry."""
-        attribution = (
+        attribution: str = (
             None
             if not global_data and ATTR_ATTRIBUTION not in global_data
             else global_data[ATTR_ATTRIBUTION]
