@@ -10,7 +10,7 @@ DESCRIPTION = "A GeoRSS generic client library."
 URL = "https://github.com/exxamalte/python-georss-generic-client"
 
 REQUIRES = [
-    "georss_client>=0.15",
+    "georss_client>=0.17",
 ]
 
 with open("README.md") as fh:
