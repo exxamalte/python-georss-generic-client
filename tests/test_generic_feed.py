@@ -3,6 +3,7 @@ import datetime
 import unittest
 from unittest import mock
 
+import pytest
 import requests
 from georss_client import UPDATE_ERROR, UPDATE_OK
 
@@ -102,17 +103,26 @@ class TestGenericFeed(unittest.TestCase):
 
         feed_entry = entries[0]
         assert feed_entry.external_id == "1234"
-        assert feed_entry.coordinates == (-34.93728111547821, 148.59710883878262)
+        assert feed_entry.coordinates == (
+            pytest.approx(-34.93728111547821),
+            pytest.approx(148.59710883878262),
+        )
         self.assertAlmostEqual(feed_entry.distance_to_home, 491.7, 1)
 
         feed_entry = entries[1]
         assert feed_entry.external_id == "2345"
-        assert feed_entry.coordinates == (-34.937170989, 148.597182317)
+        assert feed_entry.coordinates == (
+            pytest.approx(-34.937170989),
+            pytest.approx(148.597182317),
+        )
         self.assertAlmostEqual(feed_entry.distance_to_home, 491.8, 1)
 
         feed_entry = entries[2]
         assert feed_entry.external_id == "3456"
-        assert feed_entry.coordinates == (-29.962746645660683, 152.43090880416074)
+        assert feed_entry.coordinates == (
+            pytest.approx(-29.962746645660683),
+            pytest.approx(152.43090880416074),
+        )
         self.assertAlmostEqual(feed_entry.distance_to_home, 176.5, 1)
 
     @mock.patch("requests.Request")
