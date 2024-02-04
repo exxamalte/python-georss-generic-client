@@ -7,7 +7,8 @@ import requests
 from georss_client import UPDATE_ERROR, UPDATE_OK
 
 from georss_generic_client import GenericFeed
-from tests import load_fixture
+
+from .utils import load_fixture
 
 HOME_COORDINATES_1 = (-31.0, 151.0)
 HOME_COORDINATES_2 = (-37.0, 150.0)

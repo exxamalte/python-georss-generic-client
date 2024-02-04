@@ -5,7 +5,8 @@ from unittest import mock
 import pytest
 
 from georss_generic_client import GenericFeedManager
-from tests import load_fixture
+
+from .utils import load_fixture
 
 HOME_COORDINATES_1 = (-31.0, 151.0)
 
