@@ -1,4 +1,5 @@
 """Generic GeoRSS feed entry."""
+
 from __future__ import annotations
 
 from georss_client import FeedEntry
