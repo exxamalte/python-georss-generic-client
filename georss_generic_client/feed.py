@@ -1,4 +1,5 @@
 """Generic GeoRSS feed."""
+
 from __future__ import annotations
 
 from georss_client import ATTR_ATTRIBUTION, GeoRssFeed
@@ -13,7 +14,7 @@ class GenericFeed(GeoRssFeed):
         self,
         home_coordinates: tuple[float, float],
         url: str | None,
-        filter_radius: float = None,
+        filter_radius: float | None = None,
         filter_categories=None,
     ):
         """Initialise this service."""
